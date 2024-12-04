@@ -1,27 +1,79 @@
-# ProjetoBlog
+# Angular Blog Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
+Este é um projeto de blog desenvolvido em Angular, que permite criar, editar e visualizar postagens. Ele usa formulários reativos para criar e editar posts e interage com um serviço de API para salvar e atualizar os dados.
 
-## Development server
+## Requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Node.js**: O projeto foi desenvolvido com Node.js.
+- **Angular CLI**: O Angular CLI é necessário para criar, desenvolver e testar o projeto.
+- **Navegador web moderno**: O projeto deve ser executado em um navegador compatível.
 
-## Code scaffolding
+## Pré-requisitos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Node.js**: Você precisará do Node.js instalado em seu sistema. Caso não tenha, pode ser baixado e instalado a partir de [nodejs.org](https://nodejs.org/).
 
-## Build
+2. **Angular CLI**: Instale o Angular CLI globalmente (caso ainda não tenha instalado) executando o seguinte comando:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+    ```bash
+    npm install -g @angular/cli
+    ```
 
-## Running unit tests
+3. **Repositório do Projeto**: Clone este repositório em seu ambiente local:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    ```bash
+    git clone https://github.com/seu-usuario/seu-repositorio.git
+    cd seu-repositorio
+    ```
 
-## Running end-to-end tests
+## Passos para Rodar o Projeto
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. **Instalar Dependências**:
 
-## Further help
+    Dentro da pasta do projeto, execute o comando a seguir para instalar as dependências do projeto:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+    ```bash
+    npm install
+    ```
+
+2. **Executar o Servidor de Desenvolvimento**:
+
+    Com todas as dependências instaladas, você pode rodar o projeto localmente com o comando:
+
+    ```bash
+    ng serve
+    ```
+
+    Isso iniciará o servidor de desenvolvimento. O projeto estará disponível em [http://localhost:4200](http://localhost:4200).
+
+3. **Acessar a Aplicação**:
+
+    Abra seu navegador e acesse [http://localhost:4200](http://localhost:4200) para começar a usar a aplicação.
+
+## Funcionalidades
+
+- **Página Inicial**: Exibe uma lista de postagens (simulada) com a opção de criar ou editar postagens.
+- **Criar Postagem**: O formulário permite a criação de uma nova postagem. O título e o conteúdo são obrigatórios, com validação de comprimento mínimo.
+- **Editar Postagem**: A página de edição permite que o usuário edite os dados de uma postagem existente.
+- **Validações**: Campos de título e conteúdo têm validações de comprimento mínimo e obrigatórios.
+
+## Estrutura do Projeto
+
+O projeto segue a estrutura padrão do Angular, com componentes principais para exibir e editar postagens. A seguir está uma visão geral das pastas e arquivos mais importantes:
+
+- **src/app**
+  - `create.component.ts` - Componente para criação de novas postagens.
+  - `edit.component.ts` - Componente para editar postagens existentes.
+  - `post.service.ts` - Serviço que interage com a API para criar, editar e listar postagens.
+  - `post.model.ts` - Define a estrutura dos dados de uma postagem.
+  - `app.component.ts` - Componente principal que gerencia as rotas e exibe o layout básico.
+
+## Dependências
+
+- **Angular**: Framework utilizado para construir a aplicação.
+- **RxJS**: Biblioteca para manipulação de observáveis.
+- **Reactive Forms**: Utilizado para gerenciar o estado dos formulários.
+
+## Contribuições
+Se você deseja contribuir para este projeto, por favor, faça um fork e envie um pull request. Qualquer contribuição será muito apreciada!
+
+
