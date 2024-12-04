@@ -21,7 +21,7 @@ Este é um projeto de blog desenvolvido em Angular, que permite criar, editar e 
 3. **Repositório do Projeto**: Clone este repositório em seu ambiente local:
 
     ```bash
-    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/kmateus13/ProjetoBlog-Angular.git)
+    git clone (https://github.com/kmateus13/ProjetoBlog-Angular.git)
     ```
 
 ## Passos para Rodar o Projeto
