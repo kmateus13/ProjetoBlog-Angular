@@ -1,0 +1,44 @@
+<div class="container">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <span>
+            <label for="userID">ID Usuario</label>
+            <input min="1" id="userID" type="number"  formControlName="useId" [(ngModel)]="post.userId" >
+            <div *ngIf="f['useId'].touched && f['useId'].invalid" class="alert alert-danger">
+                <div class="error" *ngIf="f['useId'].errors && f['useId'].errors['required']">
+                  O ID do Usuario é obrigatório.
+                </div>
+                <div class="error" *ngIf="f['title'].errors && f['title'].errors['min']">
+                  Usuário inválido
+                </div>
+              </div>
+        </span>
+        <span>
+            <label for="titulo">Titulo</label>
+            <input minlength="3" id="titulo" type="text"  formControlName="title" [(ngModel)]="post.title">
+            <div  *ngIf="f['title'].touched && f['title'].invalid" class="alert alert-danger">
+                <div class="error" *ngIf="f['title'].errors && f['title'].errors['required']">
+                  O título é obrigatório.
+                </div>
+                <div class="error" *ngIf="f['title'].errors && f['title'].errors['minlength']">
+                  O título deve ter no mínimo 3 caracteres.
+                </div>
+              </div>
+        </span>
+        <span>
+            <label for="conteudo">Conteudo</label>
+            <textarea minlength="5"  formControlName="body" id="conteudo" cols="30" rows="10"  [(ngModel)]="post.body"></textarea>
+            <div  *ngIf="f['body'].touched && f['body'].invalid" class="alert alert-danger">
+                <div class="error" *ngIf="f['body'].errors && f['body'].errors['required']">
+                  O conteúdo é obrigatório.
+                </div>
+                <div class="error" *ngIf="f['title'].errors && f['title'].errors['minlength']">
+                  O conteúdo deve ter no mínimo 5 caracteres.
+                </div>
+              </div>
+        </span>
+        <div class="buttons">
+            <button id="enviar" type="submit" [disabled]="!form.valid">Enviar</button>
+            <button [routerLink]=""  id="cancelar">Cancelar</button>
+        </div>
+    </form>
+</div>

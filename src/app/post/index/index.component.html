@@ -1,0 +1,4 @@
+<div class="postagens">
+    <app-postagem *ngFor="let post of posts" [post]="post"  (delete)="deletePost(post.id)"></app-postagem> 
+
+</div>

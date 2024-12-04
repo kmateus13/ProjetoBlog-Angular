@@ -1,0 +1,52 @@
+
+.post {
+    width: 100%;
+    min-height: 243px;
+    max-height: 330px;
+    display: flex;
+    flex-direction: column;
+    background-color: #17171A;
+    border-radius: 8px;
+    border: 1px solid #252529;
+    padding: 40px;
+    gap: 20px;
+}
+
+.post:hover {
+    border-color: #ff0000;
+}
+
+.topoPost {
+    display: flex;
+    justify-content: space-between;
+    color: #ff0000;
+}
+
+.btnsAcoes {
+    display: flex;
+    color: #AFABB6;
+    gap: 25px;
+}
+
+.btnsAcoes i {
+    cursor: pointer;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.content h2 {
+    color: #fff;
+}
+
+.content p {
+    color: #AFABB6;
+}
+
+.content span {
+    color: #6a676e;
+}

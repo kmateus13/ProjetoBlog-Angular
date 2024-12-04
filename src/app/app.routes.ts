@@ -1,3 +1,13 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+import { CreateComponent } from './post/create/create.component';
+import { IndexComponent } from './post/index/index.component';
+
+
+export const routes: Routes = [
+ 
+  { path: '', component: IndexComponent }, 
+  { path: 'post/create', component: CreateComponent },
+  { path: 'post/:postId/edit', component: CreateComponent }
+
+];

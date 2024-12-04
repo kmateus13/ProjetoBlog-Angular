@@ -1,0 +1,16 @@
+<div class="post">
+    <div class="topoPost">
+        <span>Post #{{ post?.id }}</span>
+        <div class="btnsAcoes">
+            <span [routerLink]="['/post/', post.id, 'edit']"><i class="fa-solid fa-pen"></i></span>
+            <span (click)="onDelete(post.id)" ><i class="fa-solid fa-trash"></i></span>
+        </div>
+    </div>
+    <div class="content">
+        <h2>{{ post?.title }}</h2>
+        <p>
+            {{ post?.body }}
+        </p>
+        <span> Usuario: {{ post?.userId }}</span>
+    </div>
+</div>
